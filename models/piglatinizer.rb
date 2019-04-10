@@ -5,12 +5,12 @@ class PigLatinizer
     @words = words
   end
   
-  def split_words
-    @words.split(' ')
+  def split_words(words)
+    words.split(' ')
   end
   
   def piglatinize(words)
-    translated = split_words.map do |word|
+    translated = split_words(words).map do |word|
       index = word.index(/[aeiouAEIOU]/)
       if index == 0
         word + "way"
