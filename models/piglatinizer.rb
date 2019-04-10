@@ -9,7 +9,7 @@ class PigLatinizer
     @words.split(' ')
   end
   
-  def piglatinize
+  def piglatinize(words)
     translated = split_words.map do |word|
       index = word.index(/[aeiouAEIOU]/)
       if index == 0
