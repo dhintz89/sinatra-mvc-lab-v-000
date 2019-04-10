@@ -10,7 +10,7 @@ class PigLatinizer
   
   def piglatinize(words)
     translated = split_words(words).map do |word|
-      index = word.index(/[aeiouAEIOU]/)
+      index = word.index(/[aeiouyAEIOUY]/)
       if index == 0
         word + "way"
       else
